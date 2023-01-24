@@ -1,0 +1,29 @@
+<p>purchaseitemdetails works!</p>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th><th>Category</th><th>Quantity</th><th>Price</th><th>CGST</th><th>SGST</th><th>Total</th><th>View detail</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let p of payD">
+            <td>{{p.id}}</td>
+            <td>{{p.category}}</td>
+            <td>{{p.quantity}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.cgst}}</td>
+            <td>{{p.sgst}}</td>
+            <td>{{p.total}}</td>
+
+            <!-- <td><a href="viewdetail"><button type="button" class="btn btn-primary">View Detail</button></a></td> -->
+            <td><a href="/viewdetail/{{p.id}}"><button type="button" class="btn btn-primary">View detail</button></a></td>
+        </tr>
+
+
+
+</table>
+
+
